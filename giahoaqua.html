@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Giá hoa quả</h1>
+    <input type="text" id="a" placeholder="nhap loai hoa qua">
+    <button onclick="Hoaqua()">Xemgia</button>
+    <p id="msg"></p>
+    <script>
+    function Hoaqua(){
+        var a = document.getElementById('a').value;
+        var t;
+        switch(a) {
+            case 'Ổi':
+                t = 20000;
+                break;
+            case 'Dưa':
+                break;
+                t = 20000;
+            case 'Táo':
+                t = 30000;
+                break;
+            case 'Xoài':
+                result = 30000;
+            case 'Cam':
+                t = 40000;
+                break;
+            case 'ChômChôm':
+                result= 50000;
+            break;
+            case 'Măngcụt' :
+                result = 50000;
+                break;
+        }   
+        document.getElementById('msg').innerHTML=
+         + t + 'VND/KG ' 
+    }
+      
+    </script>
+</body>
+</html>

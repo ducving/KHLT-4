@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Tính điểm ĐH khối D</h1>
+    Môn toán <input type="text" id="1"><br><br>
+    Môn văn <input type="text" id="2"><br><br>
+    Môn anh <input type="text" id="3"><br><br>
+    Khu vực  <select name="Khu vực" id="aa">
+        <option value="KV1">KV1</option>
+        <option value="KV2-NT">KV2-NT</option>
+        <option value="KV2">KV2</option>
+        <option value="KV3">KV3</option>
+    </select>
+    <button onclick=" điểm() "> Tính Điểm</button>
+    <p id="msg"></p>
+    <script>
+        function điểm(){
+            var a = Number(document.getElementById('1').value);
+            var x = Number(document.getElementById('2').value);
+            var y = Number(document.getElementById('3').value);
+            var b = document.getElementById("aa").value;
+            switch(b){
+                case 'KV1': 
+                b= 0.75;
+                break;
+                case 'KV2-NT': 
+                b=0.5;
+                break;
+                case 'KV2': 
+                b=0.25;
+                case' KV3': 
+                b = 0 ;
+                break;
+            }
+            var i = a+x+y+b;
+            document.getElementById("msg").innerHTML= 
+           ' Tổng điểm ĐH khối D của bạn là:' + i 
+        }
+    </script>
+</body>
+</html>
